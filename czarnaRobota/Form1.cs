@@ -72,5 +72,11 @@ namespace czarnaRobota
                     break;
             }
         }
+
+        private void nameBL(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar >= 'a' && e.KeyChar <= 'z')
+                e.KeyChar -= (char)32;
+        }
     }
 }
