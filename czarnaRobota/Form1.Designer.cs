@@ -30,21 +30,23 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.maskedTextBox2 = new System.Windows.Forms.MaskedTextBox();
-            this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.maskedPesel = new System.Windows.Forms.MaskedTextBox();
+            this.data = new System.Windows.Forms.MaskedTextBox();
+            this.miejsceUr = new System.Windows.Forms.TextBox();
+            this.imie = new System.Windows.Forms.TextBox();
+            this.nazwisko = new System.Windows.Forms.TextBox();
             this.pesel = new System.Windows.Forms.Label();
             this.datIMUr = new System.Windows.Forms.Label();
             this.imi = new System.Windows.Forms.Label();
             this.nazw = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.maskedNrTel = new System.Windows.Forms.MaskedTextBox();
+            this.maskedKodP = new System.Windows.Forms.MaskedTextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.textBox11 = new System.Windows.Forms.TextBox();
-            this.textBox9 = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.mail = new System.Windows.Forms.TextBox();
+            this.poczta = new System.Windows.Forms.TextBox();
+            this.ulINrD = new System.Windows.Forms.TextBox();
+            this.miejscow = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -57,11 +59,19 @@
             this.inf = new System.Windows.Forms.RadioButton();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.label9 = new System.Windows.Forms.Label();
-            this.maskedTextBox3 = new System.Windows.Forms.MaskedTextBox();
-            this.maskedTextBox4 = new System.Windows.Forms.MaskedTextBox();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.radioButton1 = new System.Windows.Forms.RadioButton();
+            this.radioButton2 = new System.Windows.Forms.RadioButton();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.checkBox2 = new System.Windows.Forms.CheckBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.textBox3 = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.panel1.SuspendLayout();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -76,11 +86,11 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.maskedTextBox2);
-            this.groupBox1.Controls.Add(this.maskedTextBox1);
-            this.groupBox1.Controls.Add(this.textBox5);
-            this.groupBox1.Controls.Add(this.textBox2);
-            this.groupBox1.Controls.Add(this.textBox1);
+            this.groupBox1.Controls.Add(this.maskedPesel);
+            this.groupBox1.Controls.Add(this.data);
+            this.groupBox1.Controls.Add(this.miejsceUr);
+            this.groupBox1.Controls.Add(this.imie);
+            this.groupBox1.Controls.Add(this.nazwisko);
             this.groupBox1.Controls.Add(this.pesel);
             this.groupBox1.Controls.Add(this.datIMUr);
             this.groupBox1.Controls.Add(this.imi);
@@ -92,45 +102,45 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Dane osobowe ucznia";
             // 
-            // maskedTextBox2
+            // maskedPesel
             // 
-            this.maskedTextBox2.Location = new System.Drawing.Point(115, 93);
-            this.maskedTextBox2.Mask = "00000000000";
-            this.maskedTextBox2.Name = "maskedTextBox2";
-            this.maskedTextBox2.Size = new System.Drawing.Size(302, 20);
-            this.maskedTextBox2.TabIndex = 10;
+            this.maskedPesel.Location = new System.Drawing.Point(115, 93);
+            this.maskedPesel.Mask = "00000000000";
+            this.maskedPesel.Name = "maskedPesel";
+            this.maskedPesel.Size = new System.Drawing.Size(302, 20);
+            this.maskedPesel.TabIndex = 10;
             // 
-            // maskedTextBox1
+            // data
             // 
-            this.maskedTextBox1.Location = new System.Drawing.Point(160, 68);
-            this.maskedTextBox1.Mask = "00/00/0000";
-            this.maskedTextBox1.Name = "maskedTextBox1";
-            this.maskedTextBox1.Size = new System.Drawing.Size(86, 20);
-            this.maskedTextBox1.TabIndex = 9;
+            this.data.Location = new System.Drawing.Point(160, 68);
+            this.data.Mask = "00/00/0000";
+            this.data.Name = "data";
+            this.data.Size = new System.Drawing.Size(86, 20);
+            this.data.TabIndex = 9;
             // 
-            // textBox5
+            // miejsceUr
             // 
-            this.textBox5.Location = new System.Drawing.Point(252, 68);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(165, 20);
-            this.textBox5.TabIndex = 8;
-            this.textBox5.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.nameBL);
+            this.miejsceUr.Location = new System.Drawing.Point(252, 68);
+            this.miejsceUr.Name = "miejsceUr";
+            this.miejsceUr.Size = new System.Drawing.Size(165, 20);
+            this.miejsceUr.TabIndex = 8;
+            this.miejsceUr.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.nameBL);
             // 
-            // textBox2
+            // imie
             // 
-            this.textBox2.Location = new System.Drawing.Point(108, 42);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(309, 20);
-            this.textBox2.TabIndex = 5;
-            this.textBox2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.nameBL);
+            this.imie.Location = new System.Drawing.Point(108, 42);
+            this.imie.Name = "imie";
+            this.imie.Size = new System.Drawing.Size(309, 20);
+            this.imie.TabIndex = 5;
+            this.imie.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.nameBL);
             // 
-            // textBox1
+            // nazwisko
             // 
-            this.textBox1.Location = new System.Drawing.Point(96, 17);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(321, 20);
-            this.textBox1.TabIndex = 4;
-            this.textBox1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.nameBL);
+            this.nazwisko.Location = new System.Drawing.Point(96, 17);
+            this.nazwisko.Name = "nazwisko";
+            this.nazwisko.Size = new System.Drawing.Size(321, 20);
+            this.nazwisko.TabIndex = 4;
+            this.nazwisko.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.nameBL);
             // 
             // pesel
             // 
@@ -171,13 +181,13 @@
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.maskedTextBox4);
-            this.groupBox2.Controls.Add(this.maskedTextBox3);
+            this.groupBox2.Controls.Add(this.maskedNrTel);
+            this.groupBox2.Controls.Add(this.maskedKodP);
             this.groupBox2.Controls.Add(this.label6);
-            this.groupBox2.Controls.Add(this.textBox11);
-            this.groupBox2.Controls.Add(this.textBox9);
-            this.groupBox2.Controls.Add(this.textBox7);
-            this.groupBox2.Controls.Add(this.textBox6);
+            this.groupBox2.Controls.Add(this.mail);
+            this.groupBox2.Controls.Add(this.poczta);
+            this.groupBox2.Controls.Add(this.ulINrD);
+            this.groupBox2.Controls.Add(this.miejscow);
             this.groupBox2.Controls.Add(this.label5);
             this.groupBox2.Controls.Add(this.label4);
             this.groupBox2.Controls.Add(this.label3);
@@ -189,6 +199,22 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Adres korespondencyjny";
             // 
+            // maskedNrTel
+            // 
+            this.maskedNrTel.Location = new System.Drawing.Point(199, 99);
+            this.maskedNrTel.Mask = "+48 000 000 000";
+            this.maskedNrTel.Name = "maskedNrTel";
+            this.maskedNrTel.Size = new System.Drawing.Size(81, 20);
+            this.maskedNrTel.TabIndex = 12;
+            // 
+            // maskedKodP
+            // 
+            this.maskedKodP.Location = new System.Drawing.Point(160, 71);
+            this.maskedKodP.Mask = "00-000";
+            this.maskedKodP.Name = "maskedKodP";
+            this.maskedKodP.Size = new System.Drawing.Size(70, 20);
+            this.maskedKodP.TabIndex = 11;
+            // 
             // label6
             // 
             this.label6.AutoSize = true;
@@ -198,36 +224,36 @@
             this.label6.TabIndex = 10;
             this.label6.Text = "Mail:";
             // 
-            // textBox11
+            // mail
             // 
-            this.textBox11.Location = new System.Drawing.Point(314, 99);
-            this.textBox11.Name = "textBox11";
-            this.textBox11.Size = new System.Drawing.Size(103, 20);
-            this.textBox11.TabIndex = 9;
+            this.mail.Location = new System.Drawing.Point(314, 99);
+            this.mail.Name = "mail";
+            this.mail.Size = new System.Drawing.Size(103, 20);
+            this.mail.TabIndex = 9;
             // 
-            // textBox9
+            // poczta
             // 
-            this.textBox9.Location = new System.Drawing.Point(236, 71);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(181, 20);
-            this.textBox9.TabIndex = 7;
-            this.textBox9.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.nameBL);
+            this.poczta.Location = new System.Drawing.Point(236, 71);
+            this.poczta.Name = "poczta";
+            this.poczta.Size = new System.Drawing.Size(181, 20);
+            this.poczta.TabIndex = 7;
+            this.poczta.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.nameBL);
             // 
-            // textBox7
+            // ulINrD
             // 
-            this.textBox7.Location = new System.Drawing.Point(143, 43);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(274, 20);
-            this.textBox7.TabIndex = 5;
-            this.textBox7.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.nameBL);
+            this.ulINrD.Location = new System.Drawing.Point(143, 43);
+            this.ulINrD.Name = "ulINrD";
+            this.ulINrD.Size = new System.Drawing.Size(274, 20);
+            this.ulINrD.TabIndex = 5;
+            this.ulINrD.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.nameBL);
             // 
-            // textBox6
+            // miejscow
             // 
-            this.textBox6.Location = new System.Drawing.Point(115, 17);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(302, 20);
-            this.textBox6.TabIndex = 4;
-            this.textBox6.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.nameBL);
+            this.miejscow.Location = new System.Drawing.Point(115, 17);
+            this.miejscow.Name = "miejscow";
+            this.miejscow.Size = new System.Drawing.Size(302, 20);
+            this.miejscow.TabIndex = 4;
+            this.miejscow.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.nameBL);
             // 
             // label5
             // 
@@ -346,27 +372,104 @@
             this.label9.Size = new System.Drawing.Size(0, 13);
             this.label9.TabIndex = 8;
             // 
-            // maskedTextBox3
+            // panel2
             // 
-            this.maskedTextBox3.Location = new System.Drawing.Point(160, 71);
-            this.maskedTextBox3.Mask = "00-000";
-            this.maskedTextBox3.Name = "maskedTextBox3";
-            this.maskedTextBox3.Size = new System.Drawing.Size(70, 20);
-            this.maskedTextBox3.TabIndex = 11;
+            this.panel2.Controls.Add(this.radioButton2);
+            this.panel2.Controls.Add(this.radioButton1);
+            this.panel2.Location = new System.Drawing.Point(48, 511);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(290, 23);
+            this.panel2.TabIndex = 9;
             // 
-            // maskedTextBox4
+            // radioButton1
             // 
-            this.maskedTextBox4.Location = new System.Drawing.Point(199, 99);
-            this.maskedTextBox4.Mask = "+48 000 000 000";
-            this.maskedTextBox4.Name = "maskedTextBox4";
-            this.maskedTextBox4.Size = new System.Drawing.Size(81, 20);
-            this.maskedTextBox4.TabIndex = 12;
+            this.radioButton1.AutoSize = true;
+            this.radioButton1.Location = new System.Drawing.Point(3, 3);
+            this.radioButton1.Name = "radioButton1";
+            this.radioButton1.Size = new System.Drawing.Size(97, 17);
+            this.radioButton1.TabIndex = 0;
+            this.radioButton1.TabStop = true;
+            this.radioButton1.Text = "po raz pierwszy";
+            this.radioButton1.UseVisualStyleBackColor = true;
+            // 
+            // radioButton2
+            // 
+            this.radioButton2.AutoSize = true;
+            this.radioButton2.Location = new System.Drawing.Point(149, 3);
+            this.radioButton2.Name = "radioButton2";
+            this.radioButton2.Size = new System.Drawing.Size(138, 17);
+            this.radioButton2.TabIndex = 1;
+            this.radioButton2.TabStop = true;
+            this.radioButton2.Text = "po raz kolejny do części";
+            this.radioButton2.UseVisualStyleBackColor = true;
+            // 
+            // checkBox1
+            // 
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.Location = new System.Drawing.Point(344, 514);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(67, 17);
+            this.checkBox1.TabIndex = 10;
+            this.checkBox1.Text = "pisemnej";
+            this.checkBox1.UseVisualStyleBackColor = true;
+            // 
+            // checkBox2
+            // 
+            this.checkBox2.AutoSize = true;
+            this.checkBox2.Location = new System.Drawing.Point(417, 514);
+            this.checkBox2.Name = "checkBox2";
+            this.checkBox2.Size = new System.Drawing.Size(80, 17);
+            this.checkBox2.TabIndex = 11;
+            this.checkBox2.Text = "praktycznej";
+            this.checkBox2.UseVisualStyleBackColor = true;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(330, 540);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(152, 23);
+            this.button1.TabIndex = 12;
+            this.button1.Text = "Zatwierdź";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(535, 540);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(166, 23);
+            this.button2.TabIndex = 13;
+            this.button2.Text = "Wyczyść";
+            this.button2.UseVisualStyleBackColor = true;
+            // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(741, 540);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(161, 23);
+            this.button3.TabIndex = 14;
+            this.button3.Text = "Zapisz";
+            this.button3.UseVisualStyleBackColor = true;
+            // 
+            // textBox3
+            // 
+            this.textBox3.Location = new System.Drawing.Point(535, 31);
+            this.textBox3.Multiline = true;
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(367, 500);
+            this.textBox3.TabIndex = 15;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(930, 558);
+            this.ClientSize = new System.Drawing.Size(932, 569);
+            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.button3);
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.checkBox2);
+            this.Controls.Add(this.checkBox1);
+            this.Controls.Add(this.panel2);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.comboBox2);
             this.Controls.Add(this.panel1);
@@ -384,6 +487,8 @@
             this.groupBox2.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -401,14 +506,14 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox miejsceUr;
+        private System.Windows.Forms.TextBox imie;
+        private System.Windows.Forms.TextBox nazwisko;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox textBox11;
-        private System.Windows.Forms.TextBox textBox9;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox mail;
+        private System.Windows.Forms.TextBox poczta;
+        private System.Windows.Forms.TextBox ulINrD;
+        private System.Windows.Forms.TextBox miejscow;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
@@ -418,10 +523,19 @@
         private System.Windows.Forms.RadioButton inf;
         private System.Windows.Forms.ComboBox comboBox2;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox1;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox2;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox3;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox4;
+        private System.Windows.Forms.MaskedTextBox data;
+        private System.Windows.Forms.MaskedTextBox maskedPesel;
+        private System.Windows.Forms.MaskedTextBox maskedKodP;
+        private System.Windows.Forms.MaskedTextBox maskedNrTel;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.RadioButton radioButton2;
+        private System.Windows.Forms.RadioButton radioButton1;
+        private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.CheckBox checkBox2;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.TextBox textBox3;
     }
 }
 
