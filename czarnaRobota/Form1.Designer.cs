@@ -53,17 +53,17 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.term = new System.Windows.Forms.ComboBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.prog = new System.Windows.Forms.RadioButton();
             this.inf = new System.Windows.Forms.RadioButton();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.egz = new System.Windows.Forms.ComboBox();
             this.label9 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.checkBox2 = new System.Windows.Forms.CheckBox();
+            this.kol = new System.Windows.Forms.RadioButton();
+            this.pierw = new System.Windows.Forms.RadioButton();
+            this.pis = new System.Windows.Forms.CheckBox();
+            this.prak = new System.Windows.Forms.CheckBox();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
@@ -82,7 +82,6 @@
             this.label1.Size = new System.Drawing.Size(244, 13);
             this.label1.TabIndex = 0;
             this.label1.Text = "DEKLARACJA PRZYSTĄPIENIA DO EGZAMINU";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // groupBox1
             // 
@@ -168,7 +167,6 @@
             this.imi.Size = new System.Drawing.Size(68, 13);
             this.imi.TabIndex = 1;
             this.imi.Text = "Imię (imiona):";
-            this.imi.Click += new System.EventHandler(this.label3_Click);
             // 
             // nazw
             // 
@@ -272,7 +270,6 @@
             this.label4.Size = new System.Drawing.Size(117, 13);
             this.label4.TabIndex = 2;
             this.label4.Text = "Kod pocztowy i poczta:";
-            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // label3
             // 
@@ -310,17 +307,16 @@
             this.label8.TabIndex = 4;
             this.label8.Text = "przeprowadzanego w terminie";
             // 
-            // comboBox1
+            // term
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.term.FormattingEnabled = true;
+            this.term.Items.AddRange(new object[] {
             "styczeń",
             "czerwiec"});
-            this.comboBox1.Location = new System.Drawing.Point(273, 386);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 21);
-            this.comboBox1.TabIndex = 5;
-            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            this.term.Location = new System.Drawing.Point(273, 386);
+            this.term.Name = "term";
+            this.term.Size = new System.Drawing.Size(121, 21);
+            this.term.TabIndex = 5;
             // 
             // panel1
             // 
@@ -355,14 +351,14 @@
             this.inf.UseVisualStyleBackColor = true;
             this.inf.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
             // 
-            // comboBox2
+            // egz
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(39, 472);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(121, 21);
-            this.comboBox2.TabIndex = 7;
-            this.comboBox2.SelectedIndexChanged += new System.EventHandler(this.comboBox2_SelectedIndexChanged);
+            this.egz.FormattingEnabled = true;
+            this.egz.Location = new System.Drawing.Point(39, 472);
+            this.egz.Name = "egz";
+            this.egz.Size = new System.Drawing.Size(121, 21);
+            this.egz.TabIndex = 7;
+            this.egz.SelectedIndexChanged += new System.EventHandler(this.comboBox2_SelectedIndexChanged);
             // 
             // label9
             // 
@@ -374,54 +370,54 @@
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.radioButton2);
-            this.panel2.Controls.Add(this.radioButton1);
+            this.panel2.Controls.Add(this.kol);
+            this.panel2.Controls.Add(this.pierw);
             this.panel2.Location = new System.Drawing.Point(48, 511);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(290, 23);
             this.panel2.TabIndex = 9;
             // 
-            // radioButton1
+            // kol
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(3, 3);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(97, 17);
-            this.radioButton1.TabIndex = 0;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "po raz pierwszy";
-            this.radioButton1.UseVisualStyleBackColor = true;
+            this.kol.AutoSize = true;
+            this.kol.Location = new System.Drawing.Point(149, 3);
+            this.kol.Name = "kol";
+            this.kol.Size = new System.Drawing.Size(138, 17);
+            this.kol.TabIndex = 1;
+            this.kol.TabStop = true;
+            this.kol.Text = "po raz kolejny do części";
+            this.kol.UseVisualStyleBackColor = true;
             // 
-            // radioButton2
+            // pierw
             // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(149, 3);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(138, 17);
-            this.radioButton2.TabIndex = 1;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "po raz kolejny do części";
-            this.radioButton2.UseVisualStyleBackColor = true;
+            this.pierw.AutoSize = true;
+            this.pierw.Location = new System.Drawing.Point(3, 3);
+            this.pierw.Name = "pierw";
+            this.pierw.Size = new System.Drawing.Size(97, 17);
+            this.pierw.TabIndex = 0;
+            this.pierw.TabStop = true;
+            this.pierw.Text = "po raz pierwszy";
+            this.pierw.UseVisualStyleBackColor = true;
             // 
-            // checkBox1
+            // pis
             // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(344, 514);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(67, 17);
-            this.checkBox1.TabIndex = 10;
-            this.checkBox1.Text = "pisemnej";
-            this.checkBox1.UseVisualStyleBackColor = true;
+            this.pis.AutoSize = true;
+            this.pis.Location = new System.Drawing.Point(344, 514);
+            this.pis.Name = "pis";
+            this.pis.Size = new System.Drawing.Size(67, 17);
+            this.pis.TabIndex = 10;
+            this.pis.Text = "pisemnej";
+            this.pis.UseVisualStyleBackColor = true;
             // 
-            // checkBox2
+            // prak
             // 
-            this.checkBox2.AutoSize = true;
-            this.checkBox2.Location = new System.Drawing.Point(417, 514);
-            this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(80, 17);
-            this.checkBox2.TabIndex = 11;
-            this.checkBox2.Text = "praktycznej";
-            this.checkBox2.UseVisualStyleBackColor = true;
+            this.prak.AutoSize = true;
+            this.prak.Location = new System.Drawing.Point(417, 514);
+            this.prak.Name = "prak";
+            this.prak.Size = new System.Drawing.Size(80, 17);
+            this.prak.TabIndex = 11;
+            this.prak.Text = "praktycznej";
+            this.prak.UseVisualStyleBackColor = true;
             // 
             // button1
             // 
@@ -457,6 +453,7 @@
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(367, 500);
             this.textBox3.TabIndex = 15;
+            this.textBox3.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
             // 
             // Form1
             // 
@@ -467,13 +464,13 @@
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.checkBox2);
-            this.Controls.Add(this.checkBox1);
+            this.Controls.Add(this.prak);
+            this.Controls.Add(this.pis);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.label9);
-            this.Controls.Add(this.comboBox2);
+            this.Controls.Add(this.egz);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.term);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.groupBox2);
@@ -517,21 +514,21 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox term;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.RadioButton prog;
         private System.Windows.Forms.RadioButton inf;
-        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.ComboBox egz;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.MaskedTextBox data;
         private System.Windows.Forms.MaskedTextBox maskedPesel;
         private System.Windows.Forms.MaskedTextBox maskedKodP;
         private System.Windows.Forms.MaskedTextBox maskedNrTel;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.RadioButton radioButton2;
-        private System.Windows.Forms.RadioButton radioButton1;
-        private System.Windows.Forms.CheckBox checkBox1;
-        private System.Windows.Forms.CheckBox checkBox2;
+        private System.Windows.Forms.RadioButton kol;
+        private System.Windows.Forms.RadioButton pierw;
+        private System.Windows.Forms.CheckBox pis;
+        private System.Windows.Forms.CheckBox prak;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
