@@ -20,54 +20,54 @@ namespace czarnaRobota
 
         private string create_text_with_data()
         {
-            string termin, nazw, imi, date, birthPlace, pesel, city, address, zipcode, post, phone, mail, time = "", examPart = "", examNumber, examName, jobNumber = "", jobName = "";
+            string termin, nazw, imi, dat, miejsceU, nrPesel, miejsco, ulNr, kodP, poczt, nrTel, mai, raz = "", czeEgz = "", nazwEgz, numEgz, nazwZaw = "", numerZaw = "";
             termin = term.Text;
             nazw = nazwisko.Text;
             imi = imie.Text;
-            date = textBox_date.Text;
-            birthPlace = textBox_birthPlace.Text;
-            pesel = textbox_pesel.Text;
-            city = textBox_city.Text;
-            address = textBox_address.Text;
-            zipcode = textBox_zipcode.Text;
-            post = textBox_post.Text;
-            phone = textBox_phone.Text;
-            mail = textBox_mail.Text;
-            if (radio_firstTime.Checked)
+            dat = data.Text;
+            miejsceU = miejsceUr.Text;
+            nrPesel = pesel.Text;
+            miejsco = miejscow.Text;
+            ulNr = ulINrD.Text;
+            kodP = maskedKodP.Text;
+            poczt = poczta.Text;
+            nrTel = maskedNrTel.Text;
+            mai = mail.Text;
+            if (pierw.Checked)
             {
-                time = radio_firstTime.Text;
-                examPart = "do części " + checkbox_teor.Text + ", " + checkbox_prak.Text;
+                raz = pierw.Text;
+                czeEgz = "do części " + pis.Text + ", " + prak.Text;
             }
-            else if (radio_secondTime.Checked)
+            else if (kol.Checked)
             {
-                time = radio_secondTime.Text;
-                if (checkbox_teor.Checked && checkbox_prak.Checked)
+                raz = kol.Text;
+                if (pis.Checked && prak.Checked)
                 {
-                    examPart = checkbox_teor.Text + ", " + checkbox_prak.Text;
+                    czeEgz = pis.Text + ", " + prak.Text;
                 }
-                else if (checkbox_prak.Checked)
+                else if (prak.Checked)
                 {
-                    examPart = checkbox_prak.Text;
+                    czeEgz = prak.Text;
                 }
-                else if (checkbox_teor.Checked)
+                else if (pis.Checked)
                 {
-                    examPart = checkbox_teor.Text;
+                    czeEgz = pis.Text;
                 }
             }
-            examNumber = test_number.Text;
-            examName = test_title_label.Text;
+            numEgz = test_number.Text;
+            nazwEgz = test_title_label.Text;
             if (radio_inf.Checked)
             {
-                jobName = radio_inf.Text;
-                jobNumber = "351203";
+                nazwZaw = radio_inf.Text;
+                numerZaw = "351203";
             }
             else if (radio_prog.Checked)
             {
-                jobName = radio_prog.Text;
-                jobNumber = "351406";
+                nazwZaw = radio_prog.Text;
+                numerZaw = "351406";
             }
 
-            string text = $"Deklaruję przystąpienie do egzaminu potwierdzającego kwalifikacje w zawodzie przeprowadzanego w terminie {termin}\n\nDane osobowe ucznia\n   Nazwisko:\t\t   {surname}\n   Imię (Imiona):\t\t   {name}\n   Data i miejsce urodzenia:\t   {date}, {birthPlace}\n   Numer PESEL:\t\t   {pesel}\n\nAdres korenspondencyjny\n   miejscowość:\t\t   {city}\n   ulica i numer domu:\t   {address}\n   kod pocztowy i poczta:\t   {zipcode}, {post}\n   nr telefonu z kierunkowym:\t   {phone}\n   mail:\t\t\t   {mail}\n\n\nDeklaruję przystapienie do egzaminu {time} {examPart}\n\nOznaczenie kwalifikacji zgodne z podstawą programową {examNumber}.\nNazwa kwalifikacji: {examName}.\n\nSymbol cyfrowy zawodu: {jobNumber}\nNazwa zawodu: {jobName}";
+            string text = $"Deklaruję przystąpienie do egzaminu potwierdzającego kwalifikacje w zawodzie przeprowadzanego w terminie {termin}\n\nDane osobowe ucznia\n   Nazwisko:\t\t   {surname}\n   Imię (Imiona):\t\t   {name}\n   Data i miejsce urodzenia:\t   {date}, {birthPlace}\n   Numer PESEL:\t\t   {pesel}\n\nAdres korenspondencyjny\n   miejscowość:\t\t   {city}\n   ulica i numer domu:\t   {address}\n   kod pocztowy i poczta:\t   {zipcode}, {post}\n   nr telefonu z kierunkowym:\t   {phone}\n   mail:\t\t\t   {mail}\n\n\nDeklaruję przystapienie do egzaminu {raz} {czeEgz}\n\nOznaczenie kwalifikacji zgodne z podstawą programową {numEgz}.\nNazwa kwalifikacji: {nazwEgz}.\n\nSymbol cyfrowy zawodu: {numerZaw}\nNazwa zawodu: {nazwZaw}";
 
             text = text.Replace("\n", Environment.NewLine);
 
