@@ -37,6 +37,8 @@ namespace czarnaRobota
             {
                 raz = pierw.Text;
                 czeEgz = "do części " + pis.Text + ", " + prak.Text;
+                pis.Enabled = false;
+                prak.Enabled = false;
             }
             else if (kol.Checked)
             {
@@ -54,20 +56,20 @@ namespace czarnaRobota
                     czeEgz = pis.Text;
                 }
             }
-            numEgz = test_number.Text;
-            nazwEgz = test_title_label.Text;
-            if (radio_inf.Checked)
+            numEgz = egz.Text;
+            nazwEgz = label9.Text;
+            if (inf.Checked)
             {
-                nazwZaw = radio_inf.Text;
+                nazwZaw = inf.Text;
                 numerZaw = "351203";
             }
-            else if (radio_prog.Checked)
+            else if (prog.Checked)
             {
-                nazwZaw = radio_prog.Text;
+                nazwZaw = prog.Text;
                 numerZaw = "351406";
             }
 
-            string text = $"Deklaruję przystąpienie do egzaminu potwierdzającego kwalifikacje w zawodzie przeprowadzanego w terminie {termin}\n\nDane osobowe ucznia\n   Nazwisko:\t\t   {surname}\n   Imię (Imiona):\t\t   {name}\n   Data i miejsce urodzenia:\t   {date}, {birthPlace}\n   Numer PESEL:\t\t   {pesel}\n\nAdres korenspondencyjny\n   miejscowość:\t\t   {city}\n   ulica i numer domu:\t   {address}\n   kod pocztowy i poczta:\t   {zipcode}, {post}\n   nr telefonu z kierunkowym:\t   {phone}\n   mail:\t\t\t   {mail}\n\n\nDeklaruję przystapienie do egzaminu {raz} {czeEgz}\n\nOznaczenie kwalifikacji zgodne z podstawą programową {numEgz}.\nNazwa kwalifikacji: {nazwEgz}.\n\nSymbol cyfrowy zawodu: {numerZaw}\nNazwa zawodu: {nazwZaw}";
+            string text = $"Deklaruję przystąpienie do egzaminu potwierdzającego kwalifikacje w zawodzie przeprowadzanego w terminie {termin}\n\nDane osobowe ucznia\n   Nazwisko:\t\t   {nazw}\n   Imię (Imiona):\t\t   {imi}\n   Data i miejsce urodzenia:\t   {dat}, {miejsceU}\n   Numer PESEL:\t\t   {pesel}\n\nAdres korenspondencyjny\n   miejscowość:\t\t   {miejsco}\n   ulica i numer domu:\t   {ulNr}\n   kod pocztowy i poczta:\t   {kodP}, {poczt}\n   nr telefonu z kierunkowym:\t   {nrTel}\n   mail:\t\t\t   {mai}\n\n\nDeklaruję przystapienie do egzaminu {raz} {czeEgz}\n\nOznaczenie kwalifikacji zgodne z podstawą programową {numEgz}.\nNazwa kwalifikacji: {nazwEgz}.\n\nSymbol cyfrowy zawodu: {numerZaw}\nNazwa zawodu: {nazwZaw}";
 
             text = text.Replace("\n", Environment.NewLine);
 
@@ -117,6 +119,11 @@ namespace czarnaRobota
         }
 
         private void textBox3_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
         {
 
         }
