@@ -387,6 +387,7 @@
             this.kol.TabStop = true;
             this.kol.Text = "po raz kolejny do części";
             this.kol.UseVisualStyleBackColor = true;
+            this.kol.Click += new System.EventHandler(this.dupa);
             // 
             // pierw
             // 
@@ -398,10 +399,12 @@
             this.pierw.TabStop = true;
             this.pierw.Text = "po raz pierwszy";
             this.pierw.UseVisualStyleBackColor = true;
+            this.pierw.Click += new System.EventHandler(this.dupa);
             // 
             // pis
             // 
             this.pis.AutoSize = true;
+            this.pis.Enabled = false;
             this.pis.Location = new System.Drawing.Point(344, 514);
             this.pis.Name = "pis";
             this.pis.Size = new System.Drawing.Size(67, 17);
@@ -412,6 +415,7 @@
             // prak
             // 
             this.prak.AutoSize = true;
+            this.prak.Enabled = false;
             this.prak.Location = new System.Drawing.Point(417, 514);
             this.prak.Name = "prak";
             this.prak.Size = new System.Drawing.Size(80, 17);

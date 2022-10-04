@@ -37,8 +37,6 @@ namespace czarnaRobota
             {
                 raz = pierw.Text;
                 czeEgz = "do części " + pis.Text + ", " + prak.Text;
-                pis.Enabled = false;
-                prak.Enabled = false;
             }
             else if (kol.Checked)
             {
@@ -75,7 +73,6 @@ namespace czarnaRobota
 
             return text;
         }
-
         private void radioButton1_CheckedChanged(object sender, EventArgs e)
         {
             string[] col = { "INF.02", "INF.03" };
@@ -87,6 +84,7 @@ namespace czarnaRobota
         }
 
         private void radioButton2_CheckedChanged(object sender, EventArgs e)
+
         {
             string[] col = { "INF.03", "INF.04" };
             if (prog.Checked)
@@ -125,6 +123,21 @@ namespace czarnaRobota
 
         private void Form1_Load(object sender, EventArgs e)
         {
+
+        }
+
+        private void dupa(object sender, EventArgs e)
+        {
+            if (kol.Checked)
+            {
+                pis.Enabled = true;
+                prak.Enabled = true;
+            }
+            else
+            {
+                pis.Enabled = false;
+                prak.Enabled = false;
+            }
 
         }
     }
