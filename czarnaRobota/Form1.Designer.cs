@@ -109,6 +109,7 @@
             this.maskedPesel.Size = new System.Drawing.Size(302, 20);
             this.maskedPesel.TabIndex = 10;
             this.maskedPesel.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.maskedPesel_MaskInputRejected);
+            this.maskedPesel.MouseDown += new System.Windows.Forms.MouseEventHandler(this.clear);
             // 
             // data
             // 
@@ -117,6 +118,7 @@
             this.data.Name = "data";
             this.data.Size = new System.Drawing.Size(86, 20);
             this.data.TabIndex = 9;
+            this.data.MouseDown += new System.Windows.Forms.MouseEventHandler(this.clear);
             // 
             // miejsceUr
             // 
@@ -125,6 +127,7 @@
             this.miejsceUr.Size = new System.Drawing.Size(165, 20);
             this.miejsceUr.TabIndex = 8;
             this.miejsceUr.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.nameBL);
+            this.miejsceUr.MouseDown += new System.Windows.Forms.MouseEventHandler(this.clear);
             // 
             // imie
             // 
@@ -133,6 +136,7 @@
             this.imie.Size = new System.Drawing.Size(309, 20);
             this.imie.TabIndex = 5;
             this.imie.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.nameBL);
+            this.imie.MouseDown += new System.Windows.Forms.MouseEventHandler(this.clear);
             // 
             // nazwisko
             // 
@@ -141,6 +145,7 @@
             this.nazwisko.Size = new System.Drawing.Size(321, 20);
             this.nazwisko.TabIndex = 4;
             this.nazwisko.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.nameBL);
+            this.nazwisko.MouseDown += new System.Windows.Forms.MouseEventHandler(this.clear);
             // 
             // pesel
             // 
@@ -205,6 +210,7 @@
             this.maskedNrTel.Name = "maskedNrTel";
             this.maskedNrTel.Size = new System.Drawing.Size(81, 20);
             this.maskedNrTel.TabIndex = 12;
+            this.maskedNrTel.MouseDown += new System.Windows.Forms.MouseEventHandler(this.clear);
             // 
             // maskedKodP
             // 
@@ -213,6 +219,7 @@
             this.maskedKodP.Name = "maskedKodP";
             this.maskedKodP.Size = new System.Drawing.Size(70, 20);
             this.maskedKodP.TabIndex = 11;
+            this.maskedKodP.MouseDown += new System.Windows.Forms.MouseEventHandler(this.clear);
             // 
             // label6
             // 
@@ -229,6 +236,7 @@
             this.mail.Name = "mail";
             this.mail.Size = new System.Drawing.Size(103, 20);
             this.mail.TabIndex = 9;
+            this.mail.MouseDown += new System.Windows.Forms.MouseEventHandler(this.clear);
             // 
             // poczta
             // 
@@ -237,6 +245,7 @@
             this.poczta.Size = new System.Drawing.Size(181, 20);
             this.poczta.TabIndex = 7;
             this.poczta.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.nameBL);
+            this.poczta.MouseDown += new System.Windows.Forms.MouseEventHandler(this.clear);
             // 
             // ulINrD
             // 
@@ -245,6 +254,7 @@
             this.ulINrD.Size = new System.Drawing.Size(274, 20);
             this.ulINrD.TabIndex = 5;
             this.ulINrD.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.nameBL);
+            this.ulINrD.MouseDown += new System.Windows.Forms.MouseEventHandler(this.clear);
             // 
             // miejscow
             // 
@@ -253,6 +263,7 @@
             this.miejscow.Size = new System.Drawing.Size(302, 20);
             this.miejscow.TabIndex = 4;
             this.miejscow.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.nameBL);
+            this.miejscow.MouseDown += new System.Windows.Forms.MouseEventHandler(this.clear);
             // 
             // label5
             // 

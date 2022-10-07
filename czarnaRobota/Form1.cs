@@ -286,5 +286,20 @@ namespace czarnaRobota
                 }
             }
         }
+
+        private void clear(object sender, MouseEventArgs e)
+        {
+            if (sender.GetType() == typeof(MaskedTextBox))
+            {
+                MaskedTextBox x = (MaskedTextBox)sender;
+                x.BackColor = Color.White;
+            }
+            else
+            {
+                TextBox x = (TextBox)sender;
+                x.BackColor = Color.White;
+            }
+
+        }
     }
 }
