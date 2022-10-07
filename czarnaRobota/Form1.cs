@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -26,7 +27,7 @@ namespace czarnaRobota
             imi = imie.Text;
             dat = data.Text;
             miejsceU = miejsceUr.Text;
-            nrPesel = pesel.Text;
+            nrPesel = maskedPesel.Text;
             miejsco = miejscow.Text;
             ulNr = ulINrD.Text;
             kodP = maskedKodP.Text;
@@ -67,7 +68,7 @@ namespace czarnaRobota
                 numerZaw = "351406";
             }
 
-            string text = $"Deklaruję przystąpienie do egzaminu potwierdzającego kwalifikacje w zawodzie przeprowadzanego w terminie {termin}\n\nDane osobowe ucznia\n   Nazwisko:\t\t   {nazw}\n   Imię (Imiona):\t\t   {imi}\n   Data i miejsce urodzenia:\t   {dat}, {miejsceU}\n   Numer PESEL:\t\t   {pesel}\n\nAdres korenspondencyjny\n   miejscowość:\t\t   {miejsco}\n   ulica i numer domu:\t   {ulNr}\n   kod pocztowy i poczta:\t   {kodP}, {poczt}\n   nr telefonu z kierunkowym:\t   {nrTel}\n   mail:\t\t\t   {mai}\n\n\nDeklaruję przystapienie do egzaminu {raz} {czeEgz}\n\nOznaczenie kwalifikacji zgodne z podstawą programową {numEgz}.\nNazwa kwalifikacji: {nazwEgz}.\n\nSymbol cyfrowy zawodu: {numerZaw}\nNazwa zawodu: {nazwZaw}";
+            string text = $"Deklaruję przystąpienie do egzaminu potwierdzającego kwalifikacje w zawodzie przeprowadzanego w terminie {termin}\n\nDane osobowe ucznia\n   Nazwisko:\t\t   {nazw}\n   Imię (Imiona):\t\t   {imi}\n   Data i miejsce urodzenia:\t   {dat}, {miejsceU}\n   Numer PESEL:\t\t   {nrPesel}\n\nAdres korenspondencyjny\n   miejscowość:\t\t   {miejsco}\n   ulica i numer domu:\t   {ulNr}\n   kod pocztowy i poczta:\t   {kodP}, {poczt}\n   nr telefonu z kierunkowym:\t   {nrTel}\n   mail:\t\t\t   {mai}\n\n\nDeklaruję przystapienie do egzaminu {raz} {czeEgz}\n\nOznaczenie kwalifikacji zgodne z podstawą programową {numEgz}.\nNazwa kwalifikacji: {nazwEgz}.\n\nSymbol cyfrowy zawodu: {numerZaw}\nNazwa zawodu: {nazwZaw}";
 
             text = text.Replace("\n", Environment.NewLine);
 
@@ -139,6 +140,151 @@ namespace czarnaRobota
                 prak.Enabled = false;
             }
 
+        }
+
+        private void clear_maskedtextbox(MaskedTextBox a)
+        {
+            a.Text = "";
+            a.BackColor = Color.White;
+        }
+
+        private void clear_textbox(TextBox a)
+        {
+            a.Text = "";
+            a.BackColor = Color.White;
+        }
+
+        private bool check_textbox_null(TextBox a)
+        {
+            if (a.Text.Length == 0)
+            {
+                a.BackColor = Color.Red;
+                return true;
+            }
+            else
+            {
+                a.BackColor = Color.White;
+                return false;
+            }
+        }
+
+        private bool check_maskedtextbox_null(MaskedTextBox a)
+        {
+            if (a.Text.Length == 0 || a.Text == "  .  ." || a.Text == "  -" || a.Text == "+48         ")
+            {
+                a.BackColor = Color.Red;
+                return true;
+            }
+            else
+            {
+                a.BackColor = Color.White;
+                return false;
+            }
+        }
+
+
+        private void zatwierdz_Click(object sender, EventArgs e)
+        {
+            int errors = 0;
+            MaskedTextBox[] maskedTextBoxes =
+            {
+              maskedKodP,
+              maskedNrTel,
+              maskedPesel,
+              data
+            };
+
+            TextBox[] textboxes =
+            {
+                ulINrD,
+                imie,
+                nazwisko,
+                miejsceUr,
+                miejscow,
+                mail,
+                poczta
+            };
+            // check if textboxes are empty
+            for (int j = 0; j < maskedTextBoxes.Length; j++)
+            {
+                errors += Convert.ToInt32(check_maskedtextbox_null(maskedTextBoxes[j]));
+            }
+
+            for (int i = 0; i < textboxes.Length; i++)
+            {
+                errors += Convert.ToInt32(check_textbox_null(textboxes[i]));
+            }
+
+            if (errors == 0)
+            {
+                textBox3.Text = create_text_with_data();
+            }
+            else
+            {
+                MessageBox.Show("HALOOOOO");
+            }
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            MaskedTextBox[] maskedTextBoxes =
+            {
+              maskedKodP,
+              maskedNrTel,
+              maskedPesel,
+              data
+            };
+
+            TextBox[] textboxes =
+            {
+                ulINrD,
+                imie,
+                nazwisko,
+                miejsceUr,
+                miejscow,
+                mail,
+                poczta
+            };
+
+            for (int j = 0; j < maskedTextBoxes.Length; j++)
+            {
+                clear_maskedtextbox(maskedTextBoxes[j]);
+            }
+
+            for (int i = 0; i < textboxes.Length; i++)
+            {
+                clear_textbox(textboxes[i]);
+            }
+
+            textBox3.Text = null;
+        }
+
+        private void maskedPesel_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
+        {
+
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            using (var zapisDialog = new SaveFileDialog())
+            {
+
+                zapisDialog.InitialDirectory = "c:\\";
+                zapisDialog.Filter = "txt files (*.txt)|*.txt";
+                zapisDialog.FilterIndex = 2;
+                try
+                {
+                    if (zapisDialog.ShowDialog() == DialogResult.OK)
+                    {
+                        File.WriteAllText(zapisDialog.FileName, create_text_with_data());
+                    }
+                }
+                catch (Exception ex)
+                {
+
+                }
+            }
         }
     }
 }
